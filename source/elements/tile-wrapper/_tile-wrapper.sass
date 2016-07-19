@@ -3,7 +3,7 @@
 		transform: rotateX(0) translateZ(0) translateY(0)
 		opacity: 0
 	100%
-		transform: rotateX(30deg) translateZ(-300px) translateY(-300px)
+		transform: rotateX(30deg) translateZ(-300px) translateY(-400px)
 		opacity: 1
 
 .tile-wrapper
@@ -13,10 +13,12 @@
 	perspective: 800px
 	overflow: hidden
 	&_inner
-		height: 100%
+		// transform-style: preserve-3d
+		height: 800px
+		text-align: center
 		background-image: linear-gradient(45deg, rgba(194, 233, 221, 0.5) 1%, rgba(104, 119, 132, 0.5) 100%), linear-gradient(-45deg, #494d71 0%, rgba(217, 230, 185, 0.5) 80%)
 		will-change: transform
-		transform: rotateX(30deg) translateZ(-300px) translateY(-300px)
-		transition: transform 4s ease 1s
+		transform: rotateX(30deg) translateZ(-300px) translateY(-400px)
+		transition: all 4s ease 1s
 		animation: rotate-wrapper 3s ease
 
