@@ -1,0 +1,32 @@
+.platform
+	height: 100%
+	overflow: hidden
+	position: relative
+	perspective: 4000px
+	transform-style: preserve-3d
+	&_inner
+		perspective: 1200px
+		transform-style: preserve-3d
+		position: absolute
+		width: 1000px
+		height: 600px
+		border: 1px solid #000
+		+g(#F9D423, #FF4E50)
+		margin: auto
+		left: 0
+		top: 0
+		bottom: 0
+		right: 0
+		transition: transform .4s ease
+		transform: translateZ(-500px) translateY(-100px) 
+		&-flor
+			position: absolute
+			left: 0
+			bottom: 0
+			border: 1px solid #000
+			width: 1000px
+			height: 300px
+			+g(#F9D423, #FF4E50)
+			transition: transform .4s ease
+			transform: rotateX(-90deg)
+			transform-origin: 0 100% 0
