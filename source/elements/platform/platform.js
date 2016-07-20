@@ -4,11 +4,11 @@ window.onload = function () {
 		, platformOuter = document.getElementById('platform_outer');
 
 
-		new mouseMoveParralax({
-			container: platform
-			, element: platformOuter
-			, braking: 5
-			, isRotate: true
-			, isOposite: true
-		});
+		// new mouseMoveParralax({
+		// 	container: platform
+		// 	, element: platformOuter
+		// 	, braking: 5
+		// 	, isRotate: true
+		// 	, isOposite: true
+		// });
 };

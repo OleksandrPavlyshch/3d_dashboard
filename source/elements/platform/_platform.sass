@@ -13,14 +13,15 @@
 		width: 1000px
 		height: 700px
 		border: 1px solid #000
-		+g(#F9D423, #FF4E50)
 		margin: auto
 		left: 0
 		top: 0
 		bottom: 0
 		right: 0
 		transition: transform .4s ease
-		transform: translateZ(-500px) translateY(-100px) 
+		transform: translateZ(-500px) translateY(-100px)
+		+g(#F9D423, #FF4E50)
+		animation: wobble 10s 1s infinite
 		&:after
 			content: ""
 			position: absolute
@@ -33,3 +34,9 @@
 			transition: transform .4s ease
 			transform: rotateX(-90deg)
 			transform-origin: 0 100% 0
+
+@keyframes wobble
+	25%
+		transform: rotateY(13deg) rotateX(9deg) rotateZ(2deg) translateZ(-500px) translateY(-100px)
+	75%
+		transform: rotateY(8deg) rotateX(11deg) rotateZ(-2deg) translateZ(-500px) translateY(-100px)
