@@ -1,8 +1,16 @@
+$tile-columns: 3
+$tile-rows: 3
+$tile-width: (100% - $tile-columns * 2) / $tile-columns
+$tile-height: (100% - $tile-rows * 3) / $tile-rows
+
 .tile
 	display: inline-block
-	width: 22%
-	height: 174px
-	margin: 10px 1%
-	transition: transform 2s
-	transform: translateZ(10px)
+	width: $tile-width
+	height: $tile-height
+	margin: .5%
+	transition: transform 2s ease
+	transform: translateZ(50px)
 	background: linear-gradient(80deg, #43D8A8, #BCBCEC)
+	transform-origin: 50% 50% -100px
+	&:hover
+		background: linear-gradient(80deg, #BCBCEC, #43D8A8)
