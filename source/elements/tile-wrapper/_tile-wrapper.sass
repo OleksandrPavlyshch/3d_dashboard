@@ -19,6 +19,7 @@ $perspective: $panel-width * 2
 	perspective: 400%
 	overflow: hidden
 	perspective: $perspective
+	transform-style: preserve-3d
 	&_inner
 		width: $panel-width
 		height: $panel-height
@@ -27,5 +28,6 @@ $perspective: $panel-width * 2
 		will-change: transform
 		transform: rotateX(55deg) rotateY(5deg) rotateZ(-10deg) translateX(35%)// translateZ(-$panel-width/2)
 		transition: all 4s ease 1s
+		transform-origin: 50% 50% -50px
 		animation: rotate-wrapper 3s ease
 
