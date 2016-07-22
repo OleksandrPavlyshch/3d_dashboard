@@ -148,7 +148,7 @@ gulp.task('sass', function () {
 			outputStyle: 'compact'
 		}).on('error', sass.logError))
 		.pipe(postcss(processors))
-		// .pipe(sourcemaps.write())
+		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(dirs.build.css))
 		.pipe(connect.reload());
 });
@@ -206,7 +206,7 @@ gulp.task('js', function() {
 	.pipe(sourcemaps.init())
 	.pipe(uglify())
 	.pipe(concat("index.js"))
-	// .pipe(sourcemaps.write())
+	.pipe(sourcemaps.write())
 	.pipe(gulp.dest(dirs.build.js))
 	.pipe(connect.reload());
 });
