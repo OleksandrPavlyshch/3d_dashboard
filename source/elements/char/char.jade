@@ -1,22 +1,5 @@
-include ./char-mixin
-
-- var char_width = 200
-- var char_height = 100
-mixin randomInRange(min, max)
-	-var rand = Math.floor(Math.random() * (min - max) + max)
-	| #{rand}
+-var linePath = createLinePath()
 
 #char.char
-	p
-		//- - var amount = 10
-		//- - var string = []
-		//- - for (var num = 0; num <= amount; num++)
-		//- 	- string.push( +randomInRange(10, 100) )
-
-		//- 	//- | #{string}
-
-		//- +randomInRange(10, 100)
-		//- +randomInRange(10, 100)
-		//- +randomInRange(10, 100)
-	//- svg.char_line(x="0" y="0" width=char_width+"px" height=char_height+"px" viewBox="0 0 #{char_width} #{char_height}")
-		//- polyline(points= ${+randomInRange(10, 100)} + ",90 20,60 40,80 60,20" "/")/
+	svg.char_line(x="0" y="0" width="100%" height="100%" viewBox="0 0 200 100")
+		polyline(points="10,90 20,60 40,80 60,20" "/")/

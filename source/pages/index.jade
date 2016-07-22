@@ -1,5 +1,6 @@
 extends ./layout/default_layout.jade
 
+
 block title_name
 	title=title
 	link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Cookie|Roboto+Slab:700|Roboto:700,500|PT+Sans:700")
@@ -10,6 +11,7 @@ block title_name
 
 
 block main_content
+	include ../elements/mixins/mixins
 	include ../elements/platform/platform
 
 
