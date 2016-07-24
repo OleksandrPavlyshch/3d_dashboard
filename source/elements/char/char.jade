@@ -1,13 +1,15 @@
--var linePath = createLinePath()
+-var linePath = asd = createLinePath()
 
 #char.char
 	svg.char_line(x="0" y="0" width="100%" height="100%" viewBox="0 0 200 100")
 		g.char_line-wrap
-			- 	for(var i = 0; i < linePath.length-1; i++)
-					- var begin = linePath[i]
-					- var y = i+1
-					- var end = linePath[i+1]
-					line(x1=begin.x y1=begin.y x2=end.x y2=end.y "/")/
+			- for(var i = 0; i < linePath.length-1; i++)
+				- var begin = linePath[i]
+				- var y = i+1
+				- var end = linePath[i+1]
+				line(x1=begin.x y1=begin.y x2=end.x y2=end.y "/")/
 
+		g.char_line-points-wrap
+			each val in linePath
+				circle(cx=val.x, cy=val.y, r=3 "/")/
 
-		//- polyline(points="10,90 20,60 40,80 60,20" "/")/

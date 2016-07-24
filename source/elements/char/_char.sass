@@ -1,9 +1,9 @@
-$char-width: 200px
-$char-height: 100px
+$char-width: 150px
+$char-height: 75px
 
 .char
 	width: $char-width
-	height: 100px
+	height: $char-height
 	display: block
 	transform-style: preserve-3d
 	position: relative
@@ -37,11 +37,14 @@ $char-height: 100px
 		transform: rotateY(-90deg)
 		transform-origin: 0 100% 0
 	&_line
-		width: $char-width
-		height: $char-height
+		// width: $char-width
+		// height: $char-height
 		transition: transform .4s ease
 		transform: translateZ(10px)
 		&-wrap
 			fill: none
 			stroke: $fire-brick
 			stroke-width: 2
+		&-points-wrap
+			fill: $fire-brick
+			stroke-width: 0

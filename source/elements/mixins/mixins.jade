@@ -4,8 +4,9 @@
 
 - var w = 200
 - var h = 100
-- var minPoints = 5
-- var maxPoints = 8
+- var minPoints = 4
+- var maxPoints = 6
+- var dotIndent = 3
 
 - var createLinePath = function () {
 - 	var pointsAmount = getRandomNumber(minPoints, maxPoints);
@@ -18,14 +19,14 @@
 
 	case i
 		when 0
-			- point.x = 0;
-			- point.y = getRandomNumber(0, h);
+			- point.x = 5;
+			- point.y = getRandomNumber(dotIndent, h-dotIndent);
 		when pointsAmount - 1
-			- point.x = w;
-			- point.y = getRandomNumber(0, h);
+			- point.x = w-dotIndent;
+			- point.y = getRandomNumber(dotIndent, h-dotIndent);
 		default
-			- point.x = currentX = getRandomNumber(currentX || 10, w-20);
-			- point.y = getRandomNumber(0, h);
+			- point.x = currentX = getRandomNumber(currentX || 10, w-30);
+			- point.y = getRandomNumber(dotIndent, h-dotIndent);
 
 - 		points.push(point);
 - 	};
