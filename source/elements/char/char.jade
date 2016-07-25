@@ -5,7 +5,6 @@
 		g.char_line-wrap
 			- for(var i = 0; i < linePath.length-1; i++)
 				- var begin = linePath[i]
-				- var y = i+1
 				- var end = linePath[i+1]
 				line(x1=begin.x y1=begin.y x2=end.x y2=end.y "/")/
 
