@@ -1,0 +1,22 @@
+.case-item_hero
+	height: 100%
+	width: 100%
+.hero
+	perspective: 1200px
+	height: 100%
+	width: 100%
+	transform-style: preserve-3d
+	svg
+		transition: transform 1.4s ease
+		transform: translateZ(80px) scaleZ(2) //rotateX(10deg)
+		width: 200px
+		height: 200px
+		position: absolute
+		bottom: 0
+		top: 0
+		right: 0
+		left: 0
+		margin: auto
+		path
+			transition: fill 1.4s ease
+			fill: $black !important
