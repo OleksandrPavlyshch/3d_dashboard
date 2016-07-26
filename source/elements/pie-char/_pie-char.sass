@@ -4,5 +4,18 @@
 	top: 20px
 	width: 100px
 	height: 100px
-	transition: transform 1.4s ease
-	transform: translateZ(80px)
+	transform: translateZ(50px)
+	&_svg
+		transition: transform 1.4s ease
+		border-radius: 50%
+		position: relative
+		background: $brown
+		circle
+			transition: stroke-dashoffset 1.4s ease
+			stroke-width: 100
+			stroke-dashoffset: -$circle-dash - random($circle-dash - 150) - 60
+			stroke-dasharray: $circle-dash
+			transform: rotateZ(-90deg)
+			transform-origin: 50% 50%
+			fill: transparent
+			stroke: $green
