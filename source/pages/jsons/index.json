@@ -3,4 +3,16 @@
 	, "header": {
 		"title": "3D showcase"
 	}
+	, "bio_list": [
+		{
+			"name": "attack"
+		}
+		, {
+			"name": "defense"
+		}
+		, {
+			"name": "stamina"
+		}
+	]
+
 }

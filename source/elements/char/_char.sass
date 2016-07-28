@@ -4,10 +4,13 @@ $char-height: 75px
 .char
 	width: $char-width
 	height: $char-height
-	display: block
+	// display: block
 	transform-style: preserve-3d
-	position: relative
 	perspective: 800px
+	position: absolute
+	right: 50px
+	top: 50px
+	transform: translateZ(100px)
 	+g(transparent, $white)
 	vertical-align: middle
 	border: 1px solid $white
@@ -21,7 +24,7 @@ $char-height: 75px
 		bottom: 1px
 		border-bottom: 1px solid $white
 		width: $char-width
-		height: $char-width
+		height: 10px*2
 		+g(transparent, $white)
 		transition: transform .4s ease
 		transform: rotateX(-90deg)
@@ -32,7 +35,7 @@ $char-height: 75px
 		left: 0
 		top: 0
 		border-left: 1px solid $white
-		width: $char-width
+		width: 10px*2
 		height: $char-height
 		+g(transparent, $white)
 		transition: transform .4s ease
