@@ -1,10 +1,31 @@
-.progress-bar
+.progres-bar
 	position: absolute
 	transform: translateZ(120px)
 	left: 40px
 	bottom: 60px
 	// width: 100px
 	height: 30px
-	background: $black
-	svg
-		stroke: $fire-brick
+	// background: $black
+	&_svg
+		// stroke: $fire-brick
+		fill: transparent
+		overflow: hidden
+		&-border
+			stroke: $fire-brick
+			width: $progress-width - 2
+			height: $progress-height
+			stroke-width: 1
+			x: 1
+			y: 8
+		&-progres
+			width: $progress-width
+			transition: transform .6s ease
+			fill: $fire-brick
+			height: $progress-height
+			x: 1
+			y: 8
+			transform: translateX(- $progress-width - 1)
+			transform: translateX(- random(140)+px)
+		line
+			stroke: $fire-brick
+			stroke-width: 1
