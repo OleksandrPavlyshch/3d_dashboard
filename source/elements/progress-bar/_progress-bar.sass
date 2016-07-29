@@ -11,13 +11,13 @@
 			stroke: $fire-brick
 			stroke-width: 1
 		&-progres
-			transition: transform .6s ease
+			transition: stroke-dashoffset .6s ease
 			fill: $fire-brick
 			stroke: $fire-brick
 			stroke-width: 20
-			// transform: translateX(- $progress-width - 1)
-			// transform: translateX(- random(140)+px)
-			// margin-left: - random(140)+px
+			stroke-dasharray: 150 150
+			stroke-dashoffset: 150
+			stroke-dashoffset: random(140)+px
 		&-line
 			stroke: $fire-brick
 			stroke-width: 1
