@@ -10,19 +10,19 @@
 		perspective: 1200px
 		transform-style: preserve-3d
 		position: absolute
-		width: 600px
+		width: 700px
 		height: 450px
 		// border: 1px solid #000
 		margin: auto
 		left: 0
-		top: 0
+		top: 50px
 		bottom: 0
 		right: 0
 		transition: transform .4s ease
-		transform: translateZ(300px) translateY(-50px) //rotateZ(2deg)
+		transform: translateZ(250px) translateY(-50px) //rotateZ(2deg)
 		// +g(#F9D423, #FF4E50)
 		+g($nobel, $white-smoke)
-		// animation: wobble 8s 1s infinite
+		animation: wobble 8s 1s infinite
 		&:after
 			content: ""
 			position: absolute
@@ -40,6 +40,6 @@
 
 @keyframes wobble
 	25%
-		transform: rotateY(-43deg) rotateX(9deg) rotateZ(2deg) translateZ(300px) translateY(-50px)
+		transform: rotateY(-43deg) rotateX(9deg) rotateZ(2deg) translateZ(250px) translateY(-50px)
 	75%
-		transform: rotateY(38deg) rotateX(11deg) rotateZ(-2deg) translateZ(300px) translateY(-50px)
+		transform: rotateY(38deg) rotateX(11deg) rotateZ(-2deg) translateZ(250px) translateY(-50px)
