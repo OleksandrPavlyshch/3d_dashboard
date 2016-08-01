@@ -1,0 +1,34 @@
+$font_size: 14px
+$width: 124px
+$height: 44px
+$bg_hover: lighten($fire-brick, 5%)
+$bg_shadow: rgba(0,0,0,0.4)
+
+.controls
+	position: fixed
+	z-index: 10
+	right: 0
+	top: 40%
+	&_button
+		display: block
+		font-size: $font_size
+		padding: 0 7px
+		text-align: center
+		line-height: $height
+		text-decoration: none
+		color: $white
+		background-color: $fire-brick
+		text-transform: uppercase
+		border-radius: 4px
+		text-shadow: 0 -1px 1px darken($fire-brick, 7%)
+		box-shadow: 0 4px 0 darken($fire-brick, 7%), 0 5px 5px 1px $bg_shadow
+		transition: all .15s ease-in-out
+		&:hover
+			background-color: $bg_hover
+			text-shadow: 0 -1px -1px darken($bg_hover, 7%)
+			box-shadow: 0 4px 0 darken($bg_hover, 7%), 0 5px 5px 1px $bg_shadow
+		&:active,
+		&.active
+			margin-bottom: -6px
+			background-color: $bg_hover
+			margin-top: 6px
