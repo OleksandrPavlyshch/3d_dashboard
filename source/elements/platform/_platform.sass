@@ -8,34 +8,40 @@
 		height: 100%
 	&.platform-move &_inner
 		animation: wobble 8s 1s infinite
+	&.platform-3d &_inner
+		// +g($nobel, $white-smoke)
+		// transition: transform .4s ease, background-image 1.4s ease, background-color 1.4s ease
+	&.platform-3d &_inner:after
+		height: 300px
+	&.platform-3d &_inner:before
+		height: 100%
 	&_inner
 		perspective: 1200px
 		transform-style: preserve-3d
 		position: absolute
 		width: 700px
 		height: 450px
-		// border: 1px solid #000
 		margin: auto
 		left: 0
 		top: 50px
 		bottom: 0
 		right: 0
+		// +g($nobel, $white-smoke)
 		transition: transform .4s ease
-		transform: translateZ(250px) translateY(-50px) //rotateZ(2deg)
-		// +g(#F9D423, #FF4E50)
-		+g($nobel, $white-smoke)
-		&:after
+		transform: translateZ(250px) translateY(-50px)
+		&:after,
+		&:before
 			content: ""
 			position: absolute
 			left: 0
 			bottom: 1px
 			transition: height .4s ease
-			// border: 1px solid #000
 			width: 100%
-			height: 300px
-			// +g(#F9D423, #FF4E50)
+			height: 0
+			// height: 300px
 			+g($nobel, $white-smoke)
-			transition: height 1.4 ease, transform .4s ease
+			transition: height 2.4 ease, transform .4s ease
+		&:after
 			transform: rotateX(-90deg)
 			transform-origin: 0 100% 0
 
