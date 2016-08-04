@@ -4,18 +4,28 @@
 	top: 20px
 	width: 100px
 	height: 100px
-	transform: translateZ(50px)
+	// transform: translateZ(50px)
+	transition: all .6s ease .2s
+	opacity: 0
 	&_svg
-		transition: transform 1.4s ease
+		transition: transform 1s ease
 		border-radius: 50%
 		position: relative
 		background: $brown
 		circle
-			transition: stroke-dashoffset 1.4s ease
+			transition: stroke-dashoffset 1s ease
 			stroke-width: 100
-			stroke-dashoffset: -$circle-dash - random($circle-dash - 150) - 60
+			stroke-dashoffset: -$circle-dash
 			stroke-dasharray: $circle-dash
 			transform: rotateZ(-90deg)
 			transform-origin: 50% 50%
 			fill: transparent
 			stroke: $green
+			transition: all .6s ease .2s
+	.platform-3d &
+		transform: translateZ(50px)
+		transition: all .6s ease .2s
+		opacity: 1
+		&_svg circle
+			stroke-dashoffset: -$circle-dash - random($circle-dash - 150) - 60
+			transition: stroke-dashoffset 1s ease .6s
