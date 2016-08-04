@@ -1,5 +1,7 @@
 $char-width: 150px
 $char-height: 75px
+$point-speed: .2s
+$char-points-amount: 6
 
 .char
 	width: $char-width
@@ -8,11 +10,12 @@ $char-height: 75px
 	position: absolute
 	right: 50px
 	top: 50px
-	transform: translateZ(100px)
 	+g(transparent, $white)
 	vertical-align: middle
 	border: 1px solid $white
 	border-width: 0 0 1px 1px
+	opacity: 0
+	transition: all .6s ease .2s
 	&:after
 		content: ""
 		position: absolute
@@ -20,23 +23,25 @@ $char-height: 75px
 		bottom: 1px
 		border-bottom: 1px solid $white
 		width: $char-width
-		height: 10px*2
+		height: 0
 		+g(transparent, $white)
 		transition: transform .4s ease
 		transform: rotateX(-90deg)
 		transform-origin: 0 100% 0
+		transition: all .6s ease .6s
 	&:before
 		content: ""
 		position: absolute
 		left: 0
 		top: 0
 		border-left: 1px solid $white
-		width: 10px*2
+		width: 0
 		height: $char-height
 		+g(transparent, $white)
 		transition: transform .4s ease
 		transform: rotateY(-90deg)
 		transform-origin: 0 100% 0
+		transition: all .6s ease .6s
 	&_line
 		transition: transform .4s ease
 		transform: translateZ(10px) //skewX(-20deg)
@@ -44,6 +49,38 @@ $char-height: 75px
 			fill: none
 			stroke: $fire-brick
 			stroke-width: 2
+			line
+				transition-property: stroke-dashoffset
+				transition-timing-function: ease
+				transition-duration: $point-speed
+				stroke-dasharray: 150 150
+				stroke-dashoffset: 150
+				@for $i from 0 through $char-points-amount + 1
+					&:nth-child(#{$i+1})
+						transition-delay: $point-speed + $point-speed * $i * 2
 		&-points-wrap
 			fill: $fire-brick
 			stroke-width: 0
+			circle
+				transition-property: transform
+				transition-duration: $point-speed/2
+				transition-timing-function: ease
+				transform: scale(0)
+				@for $i from 0 through $char-points-amount + 1
+					&:nth-child(#{$i+1})
+						transition-delay: 0 + $i * $point-speed * 2
+	.platform-3d &
+		transform: translateZ(100px)
+		opacity: 1
+		&:after
+			height: 10px*2
+			transition: all .6s ease .6s
+		&:before
+			width: 10px*2
+			transition: all .6s ease .6s
+		&_line-points-wrap circle
+			transform: scaleX(1) scaleY(1)
+			transition-delay: 0
+		&_line-wrap line
+			stroke-dashoffset: 0
+			transition-delay: 0
