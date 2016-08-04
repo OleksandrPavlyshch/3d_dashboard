@@ -1,9 +1,11 @@
 .progres-bar
 	position: absolute
-	transform: translateZ(120px)
+	// transform: translateZ(120px)
 	left: 40px
 	bottom: 60px
 	height: 30px
+	transition: all .6s ease .2s
+	opacity: 0
 	&_svg
 		fill: transparent
 		overflow: hidden
@@ -17,7 +19,14 @@
 			stroke-width: 20
 			stroke-dasharray: 150 150
 			stroke-dashoffset: 150
-			stroke-dashoffset: random(140)+px
+			// stroke-dashoffset: random(140)+px
 		&-line
 			stroke: $fire-brick
 			stroke-width: 1
+	.platform-3d &
+		transform: translateZ(120px)
+		opacity: 1
+		transition: all .6s ease .2s
+	.platform-3d &_svg-progres
+		stroke-dashoffset: random(140)+px
+		transition: stroke-dashoffset .6s ease .6s

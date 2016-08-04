@@ -2,9 +2,10 @@
 	position: absolute
 	right: 50px
 	top: 210px
-	transform: translateZ(100px)
 	text-transform: uppercase
 	white-space: nowrap
+	transition: all .6s ease .2s
+	opacity: 0
 	&_name
 		vertical-align: top
 		margin-bottom: 5px
@@ -15,3 +16,7 @@
 		vertical-align: top
 		width: 25px
 		color: $fire-brick
+	.platform-3d &
+		transform: translateZ(100px)
+		opacity: 1
+		transition: all .6s ease .2s
